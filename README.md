@@ -1,4 +1,4 @@
-# android-quiz-app
+# Android Quiz App
 An interactive quiz application developed using Android Studio.
 
 ## 🚀 Features
