@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <!-- Question Number -->
+    <TextView
+        android:id="@+id/tv_q_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q1."
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Question Text -->
+    <TextView
+        android:id="@+id/tv_q_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Question text preview..."
+        app:layout_constraintStart_toEndOf="@id/tv_q_number"
+        app:layout_constraintEnd_toStartOf="@id/iv_edit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Edit Icon -->
+    <ImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_edit"
+        android:contentDescription="Edit Question"
+        android:padding="4dp"
+        app:layout_constraintEnd_toStartOf="@id/iv_delete"
+        app:layout_constraintTop_toTopOf="@id/tv_q_text"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Delete Icon -->
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Delete Question"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_q_text" />
+
+    <!-- Correct Option -->
+    <TextView
+        android:id="@+id/tv_correct_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_correct_option"
+        app:layout_constraintTop_toBottomOf="@id/tv_q_text"
+        app:layout_constraintStart_toStartOf="@id/tv_q_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
